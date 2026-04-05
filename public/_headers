@@ -1,0 +1,14 @@
+# Fix MIME type for .mjs and .wasm - prevents "application/octet-stream" error on Netlify
+# See: https://stackoverflow.com/questions/78807249/expected-a-javascript-module-script-but-the-server-responded-with-a-mime-type-of
+
+/*.mjs
+  Content-Type: application/javascript
+
+/*.wasm
+  Content-Type: application/wasm
+
+/assets/*.mjs
+  Content-Type: application/javascript
+
+/assets/*.wasm
+  Content-Type: application/wasm
